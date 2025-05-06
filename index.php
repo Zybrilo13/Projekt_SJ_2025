@@ -88,7 +88,8 @@ https://templatemo.com/tm-578-first-portfolio
                             <div class="about-thumb">
 
                                 <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
-                                    <h2 class="text-white me-4 mb-0">My Story</h2>
+                                    <h2 class="text-white me-4 mb-0">My Story4</h2>
+                                    <h2 class="text-white me-4 mb-0">My Story4</h2>
 
                                     <img src="images/happy-bearded-young-man.jpg" class="avatar-image img-fluid" alt="">
                                 </div>
