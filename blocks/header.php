@@ -1,3 +1,13 @@
+<?php
+$menuItems = [
+    ['label' => 'Home', 'href' => '#section_1'],
+    ['label' => 'About', 'href' => '#section_2'],
+    ['label' => 'Services', 'href' => '#section_3'],
+    ['label' => 'Projects', 'href' => '#section_4'],
+    ['label' => 'Contact', 'href' => '#section_5'],
+]
+?>
+
 <nav class="navbar navbar-expand-lg">
     <div class="container">
 
@@ -9,41 +19,24 @@
 
         <div class="d-flex align-items-center d-lg-none">
             <i class="navbar-icon bi-telephone-plus me-3"></i>
-            <a class="custom-btn btn" href="#section_5">
-                120-240-9600
-            </a>
+            <a class="custom-btn btn" href="#section_5">120-240-9600</a>
         </div>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-lg-5">
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_1">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_2">About</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_3">Services</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_4">Projects</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_5">Contact</a>
-                </li>
+                <?php foreach ($menuItems as $item): ?>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="<?= htmlspecialchars($item['href']) ?>">
+                            <?= htmlspecialchars($item['label']) ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
             </ul>
 
             <div class="d-lg-flex align-items-center d-none ms-auto">
                 <i class="navbar-icon bi-telephone-plus me-3"></i>
-                <a class="custom-btn btn" href="#section_5">
-                    120-240-9600
-                </a>
+                <a class="custom-btn btn" href="#section_5">120-240-9600</a>
             </div>
         </div>
-
     </div>
 </nav>

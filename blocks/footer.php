@@ -71,7 +71,7 @@
             </div>
 
             <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                <form method="post" action = "/reg.php" class="custom-form contact-form" role="form">
+                <form method="post" action = "reg.php" class="custom-form contact-form" role="form">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="form-floating">
