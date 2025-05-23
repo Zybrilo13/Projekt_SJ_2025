@@ -60,7 +60,7 @@ https://templatemo.com/tm-578-first-portfolio
                                 </div>
 
                                 <h2 class="mb-4">I’m available for freelance work.</h2>
-                                <p class="mb-4"><a class="custom-btn btn custom-link" href="#section_2">Let's beegin</a></p>
+                                <p class="mb-4"><a class="custom-btn btn custom-link" href="#section_2">Let's begin</a></p>
                             </div>
                         </div>
 
