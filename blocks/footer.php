@@ -89,6 +89,13 @@
                             </div>
                         </div>
 
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+
                         <div class="col-lg-3 col-md-6 col-6">
                             <div class="form-check form-check-inline">
                                 <input name="website" type="checkbox" class="form-check-input" id="inlineCheckbox1" value="1">

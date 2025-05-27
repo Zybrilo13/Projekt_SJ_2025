@@ -5,6 +5,7 @@ $menuItems = [
     ['label' => 'Services', 'href' => '#section_3'],
     ['label' => 'Projects', 'href' => '#section_4'],
     ['label' => 'Contact', 'href' => '#section_5'],
+    ['label' => 'Admin Panel', 'href' => 'admin.php'],
 ]
 ?>
 
