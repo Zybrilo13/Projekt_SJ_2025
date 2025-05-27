@@ -6,23 +6,23 @@ class User {
         $this->pdo = $dbConnection;
     }
 
-    public function validate($name, $email, $password) {
-        return strlen($name) >= 2 && strlen($email) >= 2 && filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($password) >= 8;
+    public function validate($name, $email) {
+        return strlen($name) >= 2 && strlen($email) >= 2 && filter_var($email, FILTER_VALIDATE_EMAIL);
     }
 
-    public function save($name, $email, $message, $password) {
-        $sql = "INSERT INTO users(name, email, some_information, password) VALUES (?, ?, ?, ?)";
+    public function save($name, $email, $message) {
+        $sql = "INSERT INTO users(name, email, some_information) VALUES (?, ?, ?)";
         $stmt = $this->pdo->prepare($sql);
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $stmt->execute([$name, $email, $message, $hashedPassword]);
+        $stmt->execute([$name, $email, $message]);
 
     }
 
-    public function update($id, $name, $email, $message, $password)
-    {
-        $sql = "UPDATE users SET name = ?, email = ?, some_information = ?, password = ? WHERE id = ?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$name, $email, $message, $password, $id]);
+    public function update($id, $name, $email, $message)
+        {
+            $sql = "UPDATE users SET name = ?, email = ?, some_information = ? WHERE id = ?";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([$name, $email, $message, $id]);
+
     }
 
     public function delete($id)

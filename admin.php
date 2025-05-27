@@ -60,7 +60,6 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <th>Name</th>
         <th>Email</th>
         <th>Some information</th>
-        <th>Password</th>
         <th>actions</th>
     </tr>
     </thead>
@@ -71,7 +70,6 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <td><?= htmlspecialchars($row['name']) ?></td>
             <td><?= htmlspecialchars($row['email']) ?></td>
             <td><?= htmlspecialchars($row['some_information']) ?></td>
-            <td><?= htmlspecialchars($row['password']) ?></td>
             <td>
                 <a href="edit.php?id=<?= $row['id'] ?>" class="button">edit</a>
                 <a href="admin.php?delete=<?= $row['id'] ?>" class="button delete">delete</a>

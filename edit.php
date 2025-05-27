@@ -24,10 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'] ?? '';
     $email = $_POST['email'] ?? '';
     $info = $_POST['some_information'] ?? '';
-    $password = $_POST['password'];
 
-    if ($user->validate($name, $email, $password)) {
-        $user->update($id, $name, $email, $info, $password);
+    if ($user->validate($name, $email)) {
+        $user->update($id, $name, $email, $info);
         header("Location: admin.php");
         exit();
     } else {
@@ -85,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #0b5ed7;
         }
 
         h1 {
@@ -99,15 +98,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Edit</h1>
     <label>Name:<br>
         <input type="text" name="name" value="<?= htmlspecialchars($row['name']) ?>">
-    </label><br><br>
+    </label><br>
 
     <label>Email:<br>
         <input type="email" name="email" value="<?= htmlspecialchars($row['email']) ?>">
-    </label><br><br>
+    </label><br>
 
     <label>Information:<br>
         <textarea name="some_information"><?= htmlspecialchars($row['some_information']) ?></textarea>
-    </label><br><br>
+    </label><br>
+
 
     <button type="submit">Update</button>
 </form>
