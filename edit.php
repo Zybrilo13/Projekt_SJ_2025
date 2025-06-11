@@ -107,8 +107,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <label>Information:<br>
         <textarea name="some_information"><?= htmlspecialchars($row['some_information']) ?></textarea>
     </label><br>
-
-
     <button type="submit">Update</button>
 </form>
 </body>

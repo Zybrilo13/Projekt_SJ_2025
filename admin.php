@@ -8,16 +8,15 @@ $user = new User($pdo);
 
 
 if (isset($_GET['delete'])) {
-$id = (int)$_GET['delete'];
-$user->delete($id);
-header("Location: admin.php");
-exit();
+    $id = (int)$_GET['delete'];
+    $user->delete($id);
+    header("Location: admin.php");
+    exit();
 }
 
 $stmt = $pdo->query("SELECT * FROM users");
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="uk">
